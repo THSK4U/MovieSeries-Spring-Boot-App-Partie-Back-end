@@ -1,6 +1,4 @@
-# MovieSeries-Spring-Boot-App-Partie-Back-end
-
-# MovieSeriesTV Application Backend
+# MovieSeriesTV Application Backend Spring Boot
 
 ## Contexte du Projet
 La chaîne de télévision internationale **MovieSeriesTV** a sollicité la startup **OroJacksonTech**, où vous travaillez, pour développer une application web permettant à son audience de visionner les films et séries produits par la chaîne. Le Product Owner vous a confié cette mission de créer une application backend bien structurée et fonctionnelle. L'application devra être évolutive et facile à maintenir.
