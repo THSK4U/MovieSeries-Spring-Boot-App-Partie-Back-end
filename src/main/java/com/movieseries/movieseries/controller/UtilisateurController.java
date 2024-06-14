@@ -30,8 +30,8 @@ public class UtilisateurController {
     }
 
     @PostMapping
-    public ResponseEntity<Utilisateur> addUser(@RequestBody Utilisateur utilisateur) {
-        return ResponseEntity.ok(utilisateurService.saveUser(utilisateur));
+    public ResponseEntity<UtilisateurDTO> addUser(@RequestBody UtilisateurDTO utilisateurDTO) {
+        return ResponseEntity.ok(utilisateurService.saveUser(utilisateurDTO));
     }
 
     @DeleteMapping("/Delete/{id}")

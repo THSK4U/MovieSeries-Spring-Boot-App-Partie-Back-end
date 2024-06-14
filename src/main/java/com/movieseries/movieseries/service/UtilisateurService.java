@@ -1,5 +1,6 @@
 package com.movieseries.movieseries.service;
 
+import com.movieseries.movieseries.dto.UtilisateurDTO;
 import com.movieseries.movieseries.model.Utilisateur;
 import com.movieseries.movieseries.dao.UtilisateurRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +23,13 @@ public class UtilisateurService {
         return utilisateurRepository.findById(id);
     }
 
-    public Utilisateur saveUser(Utilisateur utilisateur) {
-        return utilisateurRepository.save(utilisateur);
+    public UtilisateurDTO saveUser(UtilisateurDTO utilisateurDTO) {
+        Utilisateur utilisateur = new Utilisateur();
+        utilisateur.setEmail(utilisateurDTO.getEmail());
+        utilisateur.setNom(utilisateurDTO.getNom());
+        utilisateur.setPassword(utilisateurDTO.getPassword());
+        utilisateur = utilisateurRepository.save(utilisateur);
+        return utilisateurDTO;
     }
 
     public void deleteUserById(Long id) {

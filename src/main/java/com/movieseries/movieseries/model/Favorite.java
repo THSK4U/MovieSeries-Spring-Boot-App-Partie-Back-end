@@ -24,4 +24,9 @@ public class Favorite {
     @ManyToOne
     @JoinColumn(name = "id_Series")
     private Series series;
+
+    @ManyToOne
+    @JoinColumn(name = "id_Utilisateur")
+    private Utilisateur utilisateur;
+
     }
