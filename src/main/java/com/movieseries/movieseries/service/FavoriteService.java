@@ -33,6 +33,9 @@ private FavoriteRepository favoriteRepository;
             if (favorite.getMovie() != null) {
                 dto.setMovieId(favorite.getMovie().getId_Movie());
             }
+            if (favorite.getUtilisateur() != null) {
+                dto.setUtilisateurID(favorite.getUtilisateur().getId_Utilisateur());
+            }
             return dto;
         }).collect(Collectors.toList());
     }
@@ -86,12 +89,11 @@ private FavoriteRepository favoriteRepository;
                     .orElseThrow(() -> new RuntimeException("Series not found"));
             favorite.setSeries(series);
         }
-
         if (favoriteDTO.getUtilisateurID() != null) {
-            Utilisateur utilisateur = utilisateurRepository.findById(favoriteDTO.getUtilisateurID())
+        Utilisateur utilisateur = utilisateurRepository.findById(favoriteDTO.getUtilisateurID())
                     .orElseThrow(() -> new RuntimeException("Utilisateur not found"));
-            favorite.setUtilisateur(utilisateur);
-        }        
+        favorite.setUtilisateur(utilisateur);    
+        }  
         favorite = favoriteRepository.save(favorite);
         favoriteDTO.setId_Favoris(favorite.getId_Favoris());
         return favoriteDTO;

@@ -14,4 +14,6 @@ public class SeriesDTO {
     private String createur;
     private String acteurs;
     private Double note;
+
+    
 }
