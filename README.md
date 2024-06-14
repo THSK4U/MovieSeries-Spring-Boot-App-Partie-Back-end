@@ -39,8 +39,8 @@ En tant qu'utilisateur, je veux pouvoir cliquer sur un film ou une série pour v
 ## Travail à Faire
 
 ### Initialisation du Projet
-1. Créer un nouveau projet Spring Boot en utilisant Spring Initializr avec les dépendances nécessaires : Spring Web, Spring Data JPA, Lombok, MySQL/PostgreSQL.
-2. Configurer le fichier `application.properties` pour se connecter à la base de données (choisir entre MySQL et PostgreSQL).
+1. Créer un nouveau projet Spring Boot en utilisant Spring Initializr avec les dépendances nécessaires : Spring Web, Spring Data JPA, Lombok, MySQL.
+2. Configurer le fichier `application.properties` pour se connecter à la base de données.
 
 ### Définition des Composants
 
